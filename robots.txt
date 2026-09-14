@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://teguharyanto204-sketch.github.io/teguh-cctv-garut/sitemap.xml
+Sitemap: https://teguhcctvgarut.github.io/sitemap.xml
