@@ -50,8 +50,8 @@ html {
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #07111f;
-    color: #eef5ff;
+    background: #ffffff;
+    color: #1e293b;
     overflow-x: hidden;
 }
 
@@ -64,12 +64,13 @@ a {
    NAVBAR
 ========================= */
 
-.nav {
+nav {
     position: sticky;
     top: 0;
     z-index: 20;
-    background: rgba(5, 13, 25, 0.96);
-    border-bottom: 1px solid #1d3048;
+    background: rgba(255, 255, 255, 0.98);
+    border-bottom: 1px solid #e2e8f0;
+    box-shadow: 0 2px 12px rgba(15, 23, 42, 0.05);
 }
 
 .navin {
@@ -106,11 +107,16 @@ a {
     display: flex;
     gap: 20px;
     font-size: 14px;
-    color: #b9c9dc;
+    color: #1e293b;
+}
+
+.menu a {
+    color: #1e293b;
+    transition: color 0.2s ease;
 }
 
 .menu a:hover {
-    color: #fff;
+    color: #f97316;
 }
 
 /* =========================
@@ -127,9 +133,7 @@ a {
 ========================= */
 
 .hero {
-    background:
-        radial-gradient(circle at 80% 20%, #1554a055, transparent 35%),
-        linear-gradient(135deg, #07111f, #0a1d35);
+    background: #ffffff;
     padding: 70px 18px 65px;
 }
 
@@ -169,7 +173,7 @@ h1 {
 .hero p {
     font-size: 18px;
     line-height: 1.7;
-    color: #b8c8d9;
+    color: #475569;
     max-width: 650px;
     margin: 0;
 }
@@ -197,8 +201,16 @@ h1 {
 
 .secondary {
     background: #0c1c2f;
+    color: #ffffff;
+    border-color: #0c1c2f;
+    transition: background 0.2s ease, transform 0.2s ease;
 }
 
+.secondary:hover {
+    background: #173653;
+    border-color: #173653;
+    transform: translateY(-2px);
+}
 /* =========================
    HERO VISUAL
 ========================= */
@@ -242,8 +254,10 @@ section {
 }
 
 .title p {
-    color: #9fb1c5;
+    color: #475569;
     margin: 0;
+    line-height: 1.8;
+    font-size: 16px;
 }
 
 .cards {
@@ -253,27 +267,39 @@ section {
 }
 
 .card {
-    background: linear-gradient(160deg, #0d2034, #091625);
-    border: 1px solid #203a55;
-    border-radius: 20px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
     padding: 24px;
     min-width: 0;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.10);
 }
 
 .card h3 {
     margin: 0 0 9px;
+    color: #1e293b;
+    font-size: 18px;
+    line-height: 1.4;
 }
 
 .card p {
-    color: #a9bacb;
-    line-height: 1.6;
+    color: #475569;
+    line-height: 1.7;
+    font-size: 15px;
 }
 
 .icon {
     width: 52px;
     height: 52px;
     border-radius: 15px;
-    background: #12314b;
+    background: #e0f2fe;
+    color: #0369a1;
     display: grid;
     place-items: center;
     margin-bottom: 16px;
@@ -283,7 +309,7 @@ section {
 .price {
     font-size: 29px;
     font-weight: 900;
-    color: #3fe0ff;
+    color: #0284c7;
     margin: 12px 0;
 }
 
@@ -291,13 +317,13 @@ section {
     padding: 0;
     margin: 15px 0 0;
     list-style: none;
-    color: #b8c8d9;
+    color: #475569;
     line-height: 2;
 }
 
 .list li::before {
     content: "✓";
-    color: #35ddaa;
+    color: #059669;
     font-weight: 900;
     margin-right: 8px;
 }
@@ -307,20 +333,25 @@ section {
 ========================= */
 
 .cta {
-    background: linear-gradient(135deg, #0e3c62, #071522);
-    border: 1px solid #24577d;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
     border-radius: 26px;
     padding: 38px;
     text-align: center;
+    box-shadow: 0 8px 28px rgba(15, 23, 42, 0.06);
 }
 
 .cta h2 {
+    color: #1e293b;
     font-size: 32px;
+    line-height: 1.3;
     margin: 0 0 10px;
 }
 
 .cta p {
-    color: #b8c8d9;
+    color: #475569;
+    line-height: 1.7;
+    margin-bottom: 18px;
 }
 
 /* =========================
@@ -335,18 +366,27 @@ section {
 
 .contactbox {
     padding: 25px;
-    background: #0c1b2c;
-    border: 1px solid #203b55;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
     border-radius: 18px;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.05);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contactbox:hover {
+    border-color: #bae6fd;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
 }
 
 .contactbox strong {
     display: block;
     margin-bottom: 7px;
+    color: #1e293b;
 }
 
 .contactbox span {
-    color: #aabacd;
+    color: #475569;
+    line-height: 1.7;
 }
 
 /* =========================
@@ -531,57 +571,81 @@ footer {
   margin: 40px auto;
 }
 
+/* =====================================
+   TESTIMONI PELANGGAN
+   ===================================== */
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
 .testimonial-card {
-  background: #0d1b2a;
-  border: 1px solid rgba(0, 174, 255, 0.25);
-  border-radius: 18px;
-  padding: 22px;
-  box-sizing: border-box;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 22px;
+    box-sizing: border-box;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 26px rgba(15, 23, 42, 0.09);
 }
 
 .testimonial-top {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .testimonial-avatar {
-  width: 48px;
-  height: 48px;
-  min-width: 48px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #164e63;
-  color: #fff;
-  font-weight: bold;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e0f2fe;
+    color: #0369a1;
+    font-weight: bold;
 }
 
 .testimonial-info h3 {
-  margin: 0 0 5px;
+    margin: 0 0 5px;
+    color: #1e293b;
+    font-size: 16px;
 }
 
 .testimonial-info span {
-  font-size: 14px;
-  opacity: 0.7;
+    color: #64748b;
+    font-size: 14px;
+    opacity: 1;
 }
 
 .testimonial-stars {
-  margin: 14px 0;
-  letter-spacing: 2px;
+    margin: 14px 0;
+    color: #f59e0b;
+    letter-spacing: 2px;
 }
 
 .testimonial-text {
-  line-height: 1.6;
-  min-height: 100px;
+    color: #475569;
+    line-height: 1.7;
+    min-height: 100px;
 }
 
 .google-review {
-  margin-top: 18px;
-  padding-top: 14px;
-  border-top: 1px solid rgba(255,255,255,0.12);
-  color: #9ddcff;
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid #e2e8f0;
+    color: #0284c7;
 }
 
 @media (max-width: 768px) {
@@ -615,7 +679,7 @@ footer {
 
 .seo-pasang-cctv {
     padding: 70px 0;
-    background: #0a1626;
+    background: #ffffff;
 }
 
 .seo-pasang-cctv .wrap {
@@ -628,16 +692,16 @@ footer {
     max-width: 950px;
     margin: 0 auto;
     padding: 42px 46px;
-    background: linear-gradient(145deg, #0f2238, #0b1a2c);
-    border: 1px solid rgba(72, 160, 220, 0.22);
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
     border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 8px 28px rgba(15, 23, 42, 0.06);
 }
 
 .seo-label {
     display: inline-block;
     margin-bottom: 12px;
-    color: #29b6f6;
+    color: #0284c7;
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 1.2px;
@@ -645,14 +709,14 @@ footer {
 
 .seo-pasang-content h2 {
     margin: 0 0 20px;
-    color: #ffffff;
+    color: #475569;
     font-size: 32px;
     line-height: 1.25;
 }
 
 .seo-pasang-content p {
     margin: 0 0 16px;
-    color: #c9d8e8;
+    color: #475569;
     font-size: 16px;
     line-height: 1.8;
 }
@@ -687,7 +751,7 @@ footer {
 
 .why-teguh {
     padding: 75px 18px;
-    background: #07111f;
+    background: #ffffff;
 }
 
 .why-teguh-title {
@@ -702,14 +766,14 @@ footer {
 
 .why-teguh-title h2 {
     margin: 0 0 16px;
-    color: #ffffff;
+    color: #0f172a;
     font-size: 32px;
     line-height: 1.3;
 }
 
 .why-teguh-title p {
     margin: 0;
-    color: #b9c9dc;
+    color: #475569;
     font-size: 16px;
     line-height: 1.8;
 }
@@ -724,15 +788,16 @@ footer {
 
 .why-teguh-card {
     padding: 28px 22px;
-    background: linear-gradient(145deg, #0f2238, #0b1a2c);
-    border: 1px solid rgba(72, 160, 220, 0.22);
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
     border-radius: 18px;
-    transition: transform 0.25s ease, border-color 0.25s ease;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .why-teguh-card:hover {
     transform: translateY(-5px);
-    border-color: rgba(41, 182, 246, 0.55);
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.10);
 }
 
 .why-icon {
@@ -747,17 +812,16 @@ footer {
     border-radius: 14px;
     font-size: 25px;
 }
-
 .why-teguh-card h3 {
     margin: 0 0 12px;
-    color: #ffffff;
+    color: #0f172a;
     font-size: 18px;
     line-height: 1.4;
 }
 
 .why-teguh-card p {
     margin: 0;
-    color: #b9c9dc;
+    color: #475569;
     font-size: 14px;
     line-height: 1.7;
 }
@@ -793,11 +857,11 @@ footer {
 }
 /* =========================================
    PROSES PEMASANGAN CCTV
-   ========================================= */
+========================================= */
 
 .proses-cctv {
     padding: 75px 18px;
-    background: #07111f;
+    background: #ffffff;
 }
 
 .proses-cctv-title {
@@ -812,14 +876,14 @@ footer {
 
 .proses-cctv-title h2 {
     margin: 0 0 16px;
-    color: #ffffff;
+    color: #0f172a;
     font-size: 32px;
     line-height: 1.3;
 }
 
 .proses-cctv-title p {
     margin: 0;
-    color: #b9c9dc;
+    color: #475569;
     font-size: 16px;
     line-height: 1.8;
 }
@@ -835,15 +899,16 @@ footer {
 .proses-cctv-card {
     position: relative;
     padding: 30px 24px;
-    background: linear-gradient(145deg, #0f2238, #0b1a2c);
-    border: 1px solid rgba(72, 160, 220, 0.22);
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
     border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
     overflow: hidden;
 }
 
 .proses-number {
     margin-bottom: 18px;
-    color: #29b6f6;
+    color: #0284c7;
     font-size: 15px;
     font-weight: 800;
     letter-spacing: 1px;
@@ -851,18 +916,17 @@ footer {
 
 .proses-cctv-card h3 {
     margin: 0 0 12px;
-    color: #ffffff;
+    color: #1e293b;
     font-size: 18px;
     line-height: 1.4;
 }
 
 .proses-cctv-card p {
     margin: 0;
-    color: #b9c9dc;
+    color: #475569;
     font-size: 14px;
     line-height: 1.7;
 }
-
 /* Responsive */
 @media (max-width: 900px) {
     .proses-cctv-grid {
@@ -899,7 +963,7 @@ footer {
 
 .galeri-cctv {
     padding: 75px 18px;
-    background: #07111f;
+    background: #ffffff;
 }
 
 .galeri-cctv-title {
@@ -914,14 +978,14 @@ footer {
 
 .galeri-cctv-title h2 {
     margin: 0 0 16px;
-    color: #ffffff;
+    color: #0f172a;
     font-size: 32px;
     line-height: 1.3;
 }
 
 .galeri-cctv-title p {
     margin: 0;
-    color: #b9c9dc;
+    color: #475569;
     font-size: 16px;
     line-height: 1.8;
 }
@@ -980,12 +1044,12 @@ footer {
 }
 
 /* =========================
-   FAQ CCTV GARUT
+   FAQ CCTV GARUT - DESAIN PUTIH
 ========================= */
 
 .faq-cctv {
     padding: 75px 18px;
-    background: #07111f;
+    background: #ffffff;
 }
 
 .faq-cctv-title {
@@ -996,14 +1060,14 @@ footer {
 
 .faq-cctv-title h2 {
     margin: 0 0 16px;
-    color: #ffffff;
+    color: #1e293b;
     font-size: 32px;
     line-height: 1.3;
 }
 
 .faq-cctv-title p {
     margin: 0;
-    color: #b9c9dc;
+    color: #64748b;
     font-size: 16px;
     line-height: 1.8;
 }
@@ -1017,28 +1081,33 @@ footer {
 
 .faq-cctv-item {
     padding: 24px 26px;
-    background: linear-gradient(145deg, #0f2238, #0b1a2c);
-    border: 1px solid rgba(72, 160, 220, 0.22);
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
     border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.faq-cctv-item:hover {
+    border-color: #93c5fd;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
 }
 
 .faq-cctv-item h3 {
     margin: 0 0 10px;
-    color: #ffffff;
+    color: #1e293b;
     font-size: 18px;
     line-height: 1.5;
 }
 
 .faq-cctv-item p {
     margin: 0;
-    color: #b9c9dc;
+    color: #475569;
     font-size: 15px;
     line-height: 1.75;
 }
 
-/* Responsive FAQ */
 @media (max-width: 600px) {
-
     .faq-cctv {
         padding: 60px 16px;
     }
@@ -1058,7 +1127,6 @@ footer {
     .faq-cctv-item p {
         font-size: 14px;
     }
-
 }
 
 
@@ -1068,7 +1136,7 @@ footer {
 
 .tentang-teguh {
     padding: 75px 18px;
-    background: #07111f;
+    background: #ffffff;
 }
 
 .tentang-teguh-grid {
@@ -1087,14 +1155,14 @@ footer {
 
 .tentang-teguh-content h2 {
     margin: 0 0 20px;
-    color: #ffffff;
+    color: #0f172a;
     font-size: 32px;
     line-height: 1.3;
 }
 
 .tentang-teguh-content p {
     margin: 0 0 16px;
-    color: #b9c9dc;
+    color: #475569;
     font-size: 16px;
     line-height: 1.8;
 }
@@ -1106,21 +1174,22 @@ footer {
 
 .tentang-teguh-item {
     padding: 20px 22px;
-    background: linear-gradient(145deg, #0f2238, #0b1a2c);
-    border: 1px solid rgba(72, 160, 220, 0.22);
+    background: #ffffff;
+    border: 1px solid #dbeafe;
     border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
 }
 
 .tentang-teguh-item strong {
     display: block;
     margin-bottom: 6px;
-    color: #ffffff;
+    color: #0f172a;
     font-size: 17px;
 }
 
 .tentang-teguh-item span {
     display: block;
-    color: #b9c9dc;
+    color: #475569;
     font-size: 14px;
     line-height: 1.6;
 }
@@ -1144,6 +1213,18 @@ footer {
         font-size: 27px;
     }
 
+}
+/* TESTIMONI RESPONSIF DI HP */
+@media (max-width: 600px) {
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin: 25px auto;
+    }
+
+    .testimonial-text {
+        min-height: auto;
+    }
 }</style>
 <!-- Open Graph / Social Media SEO -->
 <meta property="og:title" content="Teguh CCTV Garut | Jasa Pasang & Jual CCTV Garut">
@@ -1173,12 +1254,15 @@ footer {
             Teguh CCTV Garut
         </a>
 
-        <div class="menu">
-            <a href="#layanan">Layanan</a>
-            <a href="#paket">Paket</a>
-            <a href="#kontak">Kontak</a>
-        </div>
-
+       <div class="menu">
+    <a href="#">Beranda</a>
+    <a href="#tentang">Tentang Kami</a>
+    <a href="#layanan">Layanan</a>
+    <a href="#galeri">Galeri</a>
+    <a href="#testimoni">Testimoni</a>
+    <a href="#faq">FAQ</a>
+    <a href="#kontak">Kontak</a>
+</div>
     </div>
 </nav>
 
@@ -1339,7 +1423,7 @@ footer {
 </section>
 
 <!-- SECTION: TENTANG TEGUH CCTV GARUT -->
-<section class="tentang-teguh">
+<section class="tentang-teguh" id="tentang">
 
     <div class="wrap">
 
@@ -1666,7 +1750,7 @@ footer {
 
 </section>
 <!-- SECTION: GALERI PEMASANGAN CCTV -->
-<section class="galeri-cctv">
+<section class="galeri-cctv" id="galeri">
 
     <div class="wrap">
 
@@ -1702,7 +1786,7 @@ footer {
 
             <div class="galeri-cctv-item">
                 <img
-                    <img
+                    
                     src="galeri-instalasi-cctv.jpg"
                     alt="Instalasi CCTV Garut">
             </div>
@@ -1714,7 +1798,7 @@ footer {
 </section>
 
 <!-- SECTION: FAQ CCTV GARUT -->
-<section class="faq-cctv">
+<section class="faq-cctv" id="faq">
 
     <div class="wrap">
 
@@ -2233,4 +2317,6 @@ function bukaWhatsApp(pesan) {
 </footer>
 </section></body>
 </html>
+
+
 
