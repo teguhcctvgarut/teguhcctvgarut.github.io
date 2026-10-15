@@ -83,6 +83,9 @@ nav {
     gap: 20px;
 }
 
+.menu-toggle {
+    display: none;
+}
 .brand {
     display: flex;
     align-items: center;
@@ -470,6 +473,7 @@ footer {
 ========================= */
 
 @media (max-width: 600px) {
+    
 
     .navin {
         padding: 10px 14px;
@@ -483,10 +487,38 @@ footer {
         width: 48px;
         height: 48px;
     }
+.navin {
+    position: relative;
+}
 
-    .menu {
-        display: none;
-    }
+.brand {
+    margin-right: auto;
+}
+    .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #1e293b;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 15px;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.menu.open {
+    display: flex;
+}
+
 
     .hero {
         padding: 50px 15px 45px;
@@ -1225,6 +1257,26 @@ footer {
     .testimonial-text {
         min-height: auto;
     }
+@media (max-width: 600px) {
+    .area-layanan-title > span {
+        font-size: 15px;
+    }
+
+    .area-layanan-title h2 {
+        font-size: 26px;
+        line-height: 1.3;
+    }
+
+    .area-layanan p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .area-layanan-box h3 {
+        font-size: 19px;
+        line-height: 1.4;
+    }
+}
 }</style>
 <!-- Open Graph / Social Media SEO -->
 <meta property="og:title" content="Teguh CCTV Garut | Jasa Pasang & Jual CCTV Garut">
@@ -1253,6 +1305,11 @@ footer {
                 alt="Logo Teguh CCTV Garut">   
             Teguh CCTV Garut
         </a>
+
+        <button class="menu-toggle" aria-label="Buka menu" aria-expanded="false">
+            ☰
+        </button>
+
 
        <div class="menu">
     <a href="#">Beranda</a>
@@ -2315,6 +2372,20 @@ function bukaWhatsApp(pesan) {
   <footer>
   © 2026 Teguh CCTV Garut • Penjualan & Jasa Instalasi CCTV
 </footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".menu");
+
+    if (menuToggle && menu) {
+        menuToggle.addEventListener("click", function () {
+            const isOpen = menu.classList.toggle("open");
+            menuToggle.setAttribute("aria-expanded", isOpen);
+            menuToggle.innerHTML = isOpen ? "✕" : "☰";
+        });
+    }
+});
+</script>
 </section></body>
 </html>
 
